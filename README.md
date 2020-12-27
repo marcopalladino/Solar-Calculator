@@ -1,11 +1,14 @@
 # Solar-Calculator
 Eletric conversion an Tools to dimension Solar Panel System for your purpose.
-* Watt calculation from given parameters VOLT AMPERE nPanel                           (1)
+
+# Esempio di metodo realizzato
+'
+/** Watt calculation from given parameters VOLT AMPERE nPanel                           (1)
  * <p>
  * Longer description. If there were any, it would be    (2)
  * here.
  * <p>
- * Cicci belli che siete avrete 2 metodi a testa da fare!
+ *
  *
  * @param  dA Ampere.  
  * @param  dVolt Panel Volt.  
@@ -17,7 +20,7 @@ public double WattPanelCalculation(double dA,double dVolt, int iPanel)
 return dWatt;
 }
 }
-
+'
 
 # Method  1
 The power P in kilowatts (kW) is equal to the current I in amps (A), times the voltage V in volts (V) divided by 1000:
@@ -26,7 +29,7 @@ P(kW) = I(A) × V(V) / 1000
 DC kilowatts to amps calculation
 The current I in amps (A) is equal to 1000 times the power P in kilowatts (kW), divided by the voltage V in volts (V):
 I(A) = 1000 × P(kW) / V(V)
-# METHOD 3
+# Method 3
 Kilowatt-hour definition
 Kilowatt-hour is an energy unit (symbol kWh or kW⋅h).
 One kilowatt-hour is defined as the energy consumed by power consumption of 1kW during 1 hour:
