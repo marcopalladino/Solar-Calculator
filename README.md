@@ -78,3 +78,26 @@ Perciò il tempo di scarica sarà di 12 ore e 18 minuti.
 La tensione finale di scarica, viene stabilita ad un valore inferiore di circa 0,2 – 0,3 Volt rispetto al valore di tensione nominale, il valore consigliato è: 11,8 per la batteria a 12 Volt, e 23,6 per la batteria a 24 Volt.
 
 Modellare gli input necessari per modellare il problema che trovare il tempo di carica o scarica di una batteria
+# Method 7
+How to convert watts to watt-hours
+How to convert electric power in watts (W) to energy in watt-hour (Wh).
+
+You can calculate watt-hour from watts and hours, but you can't convert watts to watt-hour, since watts and watt-hour units represent different quantities.
+
+Watts to watt-hour calculation formula
+The energy E in watt-hour (Wh) is equal to the power P in watts (W), times the time period t in hours (h):
+
+E(Wh) = P(W) × t(h)
+
+So
+
+watt-hour = watts × hours
+
+or
+
+Wh = W × h
+
+Example
+What is the energy consumption in watt-hour when the power consumption is 5 watts for time duration of 3 hours?
+
+E = 5W × 3h = 15 Wh
