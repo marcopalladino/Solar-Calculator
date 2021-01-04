@@ -1,0 +1,41 @@
+/**
+ * @author      Riccado Cappelli <address @ example.com>
+ * @version     1.6                 (current version number of program)
+ * @since       1.2          (the version of the package this class was first added to)
+ */
+
+import javax.swing.*;
+public class MyTools extends JPanel{
+    
+     /**
+ * Charging time from given parameters Capacity, Efficency, AmpereInput and AmpereConsumption                           (1)
+ * <p>
+ * Charging time=(Capacity*Eff./AmpereInput-AmpereConsumo) 
+ * Calculate the charging time according to the input data
+ * <p>
+ * And even more explanations to follow in consecutive
+ * paragraphs separated by HTML paragraph breaks.
+ *
+ * @param  dCapacity Capacity=capacity taken from the battery         (3)
+ * @param  dEff   Efficiency= 1.1 for Lithium batteries; 1.1 for Gel batteries; 1.15 for AGM; 1.2 for liquid batteries.        (4)
+ * @param  dAmpereIn AmpereInput=Charger current        (5)
+ * @param  dAmpereCon AmpereConsumption=Consumption of devices during charging        (5)
+ * @return Charging time
+ */   
+    public String ChargingTime(double dCapacity, double dEff, double dAmpereIn,double dAmpereCon){
+    double r=0;
+    double t=0;
+    String ris="";
+    r=(dCapacity*dEff)/(dAmpereIn-dAmpereCon);
+    for(int i=1;i<=r;i++){
+    t=r-i;
+    }
+    r=r-t;
+    t=(60*t);
+    if(t>0){
+    ris=r+" hours "+t+" minutes";
+    }else ris=r+" hours";
+    return ris;
+    }
+    
+}
