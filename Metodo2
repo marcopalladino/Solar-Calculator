@@ -1,0 +1,36 @@
+
+package javaapplication3;
+
+/**
+ * @author      Classe 3c Mancino Andrea
+ * @version     1.0                (current version number of program)
+ * @since       1.0          (the version of the package this class was first added to)
+ */
+public class NewClass {
+  /**
+ * Amper calculation from given parameters Power and Volt                            (1)
+ * <p>
+ * This program calculate the amper multiplying 1000 for the division of Power and Volt.
+ * <p>
+ * 
+ *
+ * @param  dPower Ampere.  
+ * @param  dVolt Panel Volt.    
+ * @return r=Amper in Amper.
+ */
+   public double Metodo2(double dPower,double dVolt) 
+    {
+    double r=0;
+    
+    r=1000*(dPower/dVolt);
+    
+    
+    
+    
+    return r;
+    }
+    
+    
+    
+    
+}
