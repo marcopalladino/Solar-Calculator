@@ -1,0 +1,30 @@
+public class NewClass {
+    /**
+ * @author      Classe 3c Alessio Grande Riccardo Capelli.....
+ * @version     1.0                (current version number of program)
+ * @since       1.0          (the version of the package this class was first added to)
+ */
+public class FormuleMetodi_3C {
+   
+ /**
+ * kWatt calculation from given parameters VOLT AMPERE                           (1)
+ * <p>
+ * Longer description. If there were any, it would be    (2)
+ * here.
+ * <p>
+ * 
+ *
+ * @param  dAmpere Ampere.  
+ * @param  dvolt Panel Volt.  
+  
+ * @return r=Total power Watt with panel in serie.
+ */
+    
+    public double Metodo1(double dAmpere,double dvolt){
+        
+      double r=0;
+      r=(dAmpere*dvolt)/1000;
+        
+       return r; 
+    }}}
+    
