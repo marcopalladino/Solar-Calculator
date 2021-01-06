@@ -1,0 +1,41 @@
+package javaapplication22;
+
+/**
+ * @author      Classe 3c oliveri mattia
+ * @version     1.0                (current version number of program)
+ * @since       1.0          (the version of the package this class was first added to)
+ */
+
+   
+
+public class NewClass {
+    /**
+ * @author      Classe 3c oliveri mattia
+ * @version     1.0                (current version number of program)
+ * @since       1.0          (the version of the package this class was first added to)
+ */
+public class FormuleMetodi_3C {
+   
+ /**
+ * Apere calculation from given parameters VOLT and Power                           (1)
+ * <p>
+ * this program return total ampere from power divided volt and the result  multiply 1000   (2)
+ * here.
+ * <p>
+ * 
+ *
+ * @param  dPower power.  
+ * @param  dvolt Panel Volt.  
+  
+ * @return r=Total Ampere .
+ */
+    
+    public double Metodo1(double dPower,double dvolt){
+        
+      double r=0;
+      r=1000*(dPower/dvolt);
+        
+       return r; 
+    }}}
+    
+
