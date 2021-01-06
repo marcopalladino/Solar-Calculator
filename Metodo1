@@ -1,0 +1,36 @@
+package javaapplication3;
+
+/**
+ * @author      Classe 3c Mancino Andrea
+ * @version     1.0                (current version number of program)
+ * @since       1.0          (the version of the package this class was first added to)
+ */
+public class NewClass {
+  /**
+ * kWatt calculation from given parameters VOLT AMPERE                            (1)
+ * <p>
+ * Longer description. If there were any, it would be    (2)
+ * here.
+ * <p>
+ * 
+ *
+ * @param  dAmper Ampere.  
+ * @param  dVolt Panel Volt.    
+ * @return r=Power in kiloWhat.
+ */
+   public double Metodo1(double dAmper,double dVolt) 
+    {
+    double r=0;
+    
+    r=(dAmper*dVolt)/1000;
+    
+    
+    
+    
+    return r;
+    }
+    
+    
+    
+    
+}
