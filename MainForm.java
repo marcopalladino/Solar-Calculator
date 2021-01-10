@@ -3,10 +3,16 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+package solar.calculator_v1;
+
+import java.math.*;
+import java.text.*;
+import javax.swing.JOptionPane;
 
 /**
- *
- * @author 39347
+ * @author MarcoMorrone, BeatriceScala, MarikaMacagno
+ * @version 1.0
+ * @since 1.0
  */
 public class MainForm extends javax.swing.JFrame {
 
@@ -26,320 +32,763 @@ public class MainForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel1 = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
+        jDialog1 = new javax.swing.JDialog();
         jLabel2 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jSlider1 = new javax.swing.JSlider();
-        jLabel3 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jSlider2 = new javax.swing.JSlider();
-        jLabel6 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jButton2 = new javax.swing.JButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        jPanel3 = new javax.swing.JPanel();
-        jPanel4 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jLabel11 = new javax.swing.JLabel();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jTextField5 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
+        jTextArea1 = new javax.swing.JTextArea();
+        BatteryTipeButtonGroup = new javax.swing.ButtonGroup();
+        jLabel3 = new javax.swing.JLabel();
+        MainTabbedPane = new javax.swing.JTabbedPane();
+        kWtoAPanel = new javax.swing.JPanel();
+        PowerLabel1 = new javax.swing.JLabel();
+        dPowerTextField = new javax.swing.JTextField();
+        VoltLabel2 = new javax.swing.JLabel();
+        dVoltTextField2 = new javax.swing.JTextField();
+        kWtoAButton = new javax.swing.JButton();
+        kWtoALabel = new javax.swing.JLabel();
+        kWtoAScrollPanel = new javax.swing.JScrollPane();
+        kWtoATextArea = new javax.swing.JTextArea();
+        PowerCalculatorPanel = new javax.swing.JPanel();
+        VoltLabel1 = new javax.swing.JLabel();
+        dVoltTextField1 = new javax.swing.JTextField();
+        AmpereLabel1 = new javax.swing.JLabel();
+        dAmpereTextField1 = new javax.swing.JTextField();
+        PowerCalcButton = new javax.swing.JButton();
+        PowerCalcolatorLabel = new javax.swing.JLabel();
+        PowerCalculatorScrollPanel = new javax.swing.JScrollPane();
+        PowerCalculatorTextArea = new javax.swing.JTextArea();
+        kWtokWhCalculatorPanel = new javax.swing.JPanel();
+        kWtokWhCalculatorLabel = new javax.swing.JLabel();
+        KilowattsLabel = new javax.swing.JLabel();
+        dKilowattsTextField = new javax.swing.JTextField();
+        kWhCalcButton = new javax.swing.JButton();
+        kWhCalculatorScrollPanel = new javax.swing.JScrollPane();
+        kWhCalculatorTextArea = new javax.swing.JTextArea();
+        HoursLabel = new javax.swing.JLabel();
+        iHoursSpinner = new javax.swing.JSpinner();
+        hpTokWPanel = new javax.swing.JPanel();
+        hpTokWCalculatorLabel = new javax.swing.JLabel();
+        dHorsepowerTextField = new javax.swing.JTextField();
+        jLabel1 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        hpTokWTextArea = new javax.swing.JTextArea();
+        hpTokWButton = new javax.swing.JButton();
+        BatteryChargingPanel = new javax.swing.JPanel();
+        BatteryChargingLabel = new javax.swing.JLabel();
+        AGMBatteryButton2 = new javax.swing.JRadioButton();
+        GelBatteryButton3 = new javax.swing.JRadioButton();
+        LiquidBatteryButton4 = new javax.swing.JRadioButton();
+        BatteryCapacityLabel = new javax.swing.JLabel();
+        BatteryCapacityTextField = new javax.swing.JTextField();
+        ChargerInputLabel = new javax.swing.JLabel();
+        ChargerInputTextField = new javax.swing.JTextField();
+        EquipmentConsumptionLabel = new javax.swing.JLabel();
+        EquipmentConsumptionTextField = new javax.swing.JTextField();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        BatteryChargingTextArea = new javax.swing.JTextArea();
+        jButton1 = new javax.swing.JButton();
+        BatteryUnchargingPanel = new javax.swing.JPanel();
+        BatteryUnChargingLabel1 = new javax.swing.JLabel();
+        BatteryCapacityLabel1 = new javax.swing.JLabel();
+        BatteryCapacityTextField1 = new javax.swing.JTextField();
+        EquipmentConsumptionLabel1 = new javax.swing.JLabel();
+        EquipmentConsumptionTextField1 = new javax.swing.JTextField();
+        jButton2 = new javax.swing.JButton();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        BatteryUnChargingTextArea1 = new javax.swing.JTextArea();
+        WtoWhCalculatorPanel = new javax.swing.JPanel();
+        WtoWhCalculatorLabel = new javax.swing.JLabel();
+        WattsLabel1 = new javax.swing.JLabel();
+        dWattsTextField = new javax.swing.JTextField();
+        kWhCalcButton1 = new javax.swing.JButton();
+        kWhCalculatorScrollPanel1 = new javax.swing.JScrollPane();
+        WhCalculatorTextArea = new javax.swing.JTextArea();
+        HoursLabel1 = new javax.swing.JLabel();
+        iHoursSpinner1 = new javax.swing.JSpinner();
+        MainMenuBar = new javax.swing.JMenuBar();
+        FileMenuItem = new javax.swing.JMenu();
+        NewWindowSubMenuItem = new javax.swing.JMenuItem();
+        CloseSubMenuItem = new javax.swing.JMenuItem();
+        HelpSubMenuItem = new javax.swing.JMenuItem();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Solar Calculator v.1.0.0");
+        jDialog1.pack();
+        jDialog1.setBounds(new java.awt.Rectangle(0, 0, 418, 197));
+        jDialog1.setIconImage(null);
 
-        jLabel1.setText("Panel Volt");
-
-        jLabel2.setText("Panel Ampere");
-
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-
-        jSlider1.setMaximum(50);
-        jSlider1.setMinimum(1);
-
-        jLabel3.setText("Panel number");
+        jLabel2.setFont(new java.awt.Font("Montserrat", 1, 24)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("HELP PAGE");
+        jLabel2.setToolTipText("");
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        jTextArea1.setText("This software is developed by Marika Macagno, Beatrice Scala and Marco Morrone.\n This work is licensed under the Creative Commons \nAttribuzione - Non commerciale 4.0 Internazionale License. \nTo view a copy of this license, visit \nhttp://creativecommons.org/licenses/by-nc/4.0/. ");
+        jScrollPane3.setViewportView(jTextArea1);
 
-        jButton1.setText("Watt calculation");
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog1Layout.createSequentialGroup()
+                .addGap(101, 101, 101)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(121, Short.MAX_VALUE))
+            .addComponent(jScrollPane3, javax.swing.GroupLayout.Alignment.TRAILING)
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+
+        jLabel3.setText("Attenzione: se la corrente del caricatore e maggiore del 25% della capacita della batteria, si rischia di danneggiare la stessa.");
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("SolarCalculator_v1");
+
+        PowerLabel1.setText("Inserire Potenza");
+
+        dPowerTextField.setText("Numero di kilowatts");
+        dPowerTextField.setToolTipText("");
+        dPowerTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dPowerTextFieldActionPerformed(evt);
+            }
+        });
+
+        VoltLabel2.setText("Inserire Volt");
+
+        dVoltTextField2.setText("Numero di Volt");
+        dVoltTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dVoltTextField2ActionPerformed(evt);
+            }
+        });
+
+        kWtoAButton.setText("Calcola");
+        kWtoAButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kWtoAButtonActionPerformed(evt);
+            }
+        });
+
+        kWtoALabel.setText("DC kilowatts to amps (A)");
+
+        kWtoATextArea.setEditable(false);
+        kWtoATextArea.setColumns(20);
+        kWtoATextArea.setRows(5);
+        kWtoAScrollPanel.setViewportView(kWtoATextArea);
+
+        javax.swing.GroupLayout kWtoAPanelLayout = new javax.swing.GroupLayout(kWtoAPanel);
+        kWtoAPanel.setLayout(kWtoAPanelLayout);
+        kWtoAPanelLayout.setHorizontalGroup(
+            kWtoAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kWtoAPanelLayout.createSequentialGroup()
+                .addGroup(kWtoAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(kWtoAPanelLayout.createSequentialGroup()
+                        .addGap(121, 121, 121)
+                        .addComponent(kWtoALabel))
+                    .addGroup(kWtoAPanelLayout.createSequentialGroup()
+                        .addGap(154, 154, 154)
+                        .addComponent(kWtoAButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(kWtoAPanelLayout.createSequentialGroup()
+                        .addGap(101, 101, 101)
+                        .addGroup(kWtoAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(kWtoAScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(kWtoAPanelLayout.createSequentialGroup()
+                                .addComponent(PowerLabel1)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(dPowerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(kWtoAPanelLayout.createSequentialGroup()
+                                .addComponent(VoltLabel2)
+                                .addGap(25, 25, 25)
+                                .addComponent(dVoltTextField2)))))
+                .addContainerGap(101, Short.MAX_VALUE))
+        );
+        kWtoAPanelLayout.setVerticalGroup(
+            kWtoAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kWtoAPanelLayout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addComponent(kWtoALabel)
+                .addGap(31, 31, 31)
+                .addGroup(kWtoAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(PowerLabel1)
+                    .addComponent(dPowerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(kWtoAPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(VoltLabel2)
+                    .addComponent(dVoltTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(kWtoAButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(kWtoAScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        MainTabbedPane.addTab("kW to A", kWtoAPanel);
+
+        VoltLabel1.setText("Inserire Volt");
+
+        dVoltTextField1.setText("Numero di Volt");
+        dVoltTextField1.setToolTipText("");
+        dVoltTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dVoltTextField1ActionPerformed(evt);
+            }
+        });
+
+        AmpereLabel1.setText("Inserire Ampere");
+
+        dAmpereTextField1.setText("Numero di Ampere");
+        dAmpereTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dAmpereTextField1ActionPerformed(evt);
+            }
+        });
+
+        PowerCalcButton.setText("Calcola");
+        PowerCalcButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                PowerCalcButtonActionPerformed(evt);
+            }
+        });
+
+        PowerCalcolatorLabel.setText("Power Calculator (kW)");
+
+        PowerCalculatorTextArea.setEditable(false);
+        PowerCalculatorTextArea.setColumns(20);
+        PowerCalculatorTextArea.setRows(5);
+        PowerCalculatorScrollPanel.setViewportView(PowerCalculatorTextArea);
+
+        javax.swing.GroupLayout PowerCalculatorPanelLayout = new javax.swing.GroupLayout(PowerCalculatorPanel);
+        PowerCalculatorPanel.setLayout(PowerCalculatorPanelLayout);
+        PowerCalculatorPanelLayout.setHorizontalGroup(
+            PowerCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PowerCalculatorPanelLayout.createSequentialGroup()
+                .addGroup(PowerCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(PowerCalculatorPanelLayout.createSequentialGroup()
+                        .addGap(154, 154, 154)
+                        .addComponent(PowerCalcButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(PowerCalculatorPanelLayout.createSequentialGroup()
+                        .addGap(103, 103, 103)
+                        .addGroup(PowerCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(PowerCalculatorScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(PowerCalculatorPanelLayout.createSequentialGroup()
+                                .addGroup(PowerCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(AmpereLabel1)
+                                    .addComponent(VoltLabel1))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(PowerCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(dVoltTextField1)
+                                    .addComponent(dAmpereTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 122, Short.MAX_VALUE)))
+                            .addGroup(PowerCalculatorPanelLayout.createSequentialGroup()
+                                .addGap(37, 37, 37)
+                                .addComponent(PowerCalcolatorLabel)))))
+                .addContainerGap(104, Short.MAX_VALUE))
+        );
+        PowerCalculatorPanelLayout.setVerticalGroup(
+            PowerCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PowerCalculatorPanelLayout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(PowerCalcolatorLabel)
+                .addGap(29, 29, 29)
+                .addGroup(PowerCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(VoltLabel1)
+                    .addComponent(dVoltTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(PowerCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AmpereLabel1)
+                    .addComponent(dAmpereTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PowerCalcButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(PowerCalculatorScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(60, Short.MAX_VALUE))
+        );
+
+        MainTabbedPane.addTab("V&A to kW", PowerCalculatorPanel);
+
+        kWtokWhCalculatorLabel.setText("Kilowatts to KilowattsHour Calculator (kWh)");
+
+        KilowattsLabel.setText("Inserire Kilowatts");
+
+        dKilowattsTextField.setText("Numero di Kilowatts");
+        dKilowattsTextField.setToolTipText("");
+        dKilowattsTextField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dKilowattsTextFieldMouseClicked(evt);
+            }
+        });
+        dKilowattsTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dKilowattsTextFieldActionPerformed(evt);
+            }
+        });
+
+        kWhCalcButton.setText("Calcola");
+        kWhCalcButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                kWhCalcButtonActionPerformed(evt);
+            }
+        });
+
+        kWhCalculatorTextArea.setEditable(false);
+        kWhCalculatorTextArea.setColumns(20);
+        kWhCalculatorTextArea.setRows(5);
+        kWhCalculatorScrollPanel.setViewportView(kWhCalculatorTextArea);
+
+        HoursLabel.setText("Inserire numero di ore");
+
+        iHoursSpinner.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        iHoursSpinner.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+
+        javax.swing.GroupLayout kWtokWhCalculatorPanelLayout = new javax.swing.GroupLayout(kWtokWhCalculatorPanel);
+        kWtokWhCalculatorPanel.setLayout(kWtokWhCalculatorPanelLayout);
+        kWtokWhCalculatorPanelLayout.setHorizontalGroup(
+            kWtokWhCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kWtokWhCalculatorPanelLayout.createSequentialGroup()
+                .addGroup(kWtokWhCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(kWtokWhCalculatorPanelLayout.createSequentialGroup()
+                        .addGap(154, 154, 154)
+                        .addComponent(kWhCalcButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(kWtokWhCalculatorPanelLayout.createSequentialGroup()
+                        .addGap(103, 103, 103)
+                        .addGroup(kWtokWhCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(kWhCalculatorScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(kWtokWhCalculatorLabel)
+                            .addGroup(kWtokWhCalculatorPanelLayout.createSequentialGroup()
+                                .addComponent(KilowattsLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(dKilowattsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, kWtokWhCalculatorPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(HoursLabel)
+                        .addGap(18, 18, 18)
+                        .addComponent(iHoursSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)))
+                .addGap(103, 103, 103))
+        );
+        kWtokWhCalculatorPanelLayout.setVerticalGroup(
+            kWtokWhCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(kWtokWhCalculatorPanelLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(kWtokWhCalculatorLabel)
+                .addGap(18, 18, 18)
+                .addGroup(kWtokWhCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(KilowattsLabel)
+                    .addComponent(dKilowattsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(kWtokWhCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(HoursLabel)
+                    .addComponent(iHoursSpinner, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addComponent(kWhCalcButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(kWhCalculatorScrollPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(45, Short.MAX_VALUE))
+        );
+
+        MainTabbedPane.addTab("kW to kWh", kWtokWhCalculatorPanel);
+
+        hpTokWCalculatorLabel.setText("Horsepower to Kilowatts (hp to kW)");
+
+        dHorsepowerTextField.setText("Numero di HorsePower");
+        dHorsepowerTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                dHorsepowerTextFieldActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setText("Inserire Horsepower");
+
+        hpTokWTextArea.setColumns(20);
+        hpTokWTextArea.setRows(5);
+        jScrollPane1.setViewportView(hpTokWTextArea);
+
+        hpTokWButton.setText("Calcola");
+        hpTokWButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                hpTokWButtonActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout hpTokWPanelLayout = new javax.swing.GroupLayout(hpTokWPanel);
+        hpTokWPanel.setLayout(hpTokWPanelLayout);
+        hpTokWPanelLayout.setHorizontalGroup(
+            hpTokWPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(hpTokWPanelLayout.createSequentialGroup()
+                .addGroup(hpTokWPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(hpTokWPanelLayout.createSequentialGroup()
+                        .addGap(102, 102, 102)
+                        .addComponent(hpTokWCalculatorLabel))
+                    .addGroup(hpTokWPanelLayout.createSequentialGroup()
+                        .addGap(96, 96, 96)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(dHorsepowerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(hpTokWPanelLayout.createSequentialGroup()
+                        .addGap(109, 109, 109)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(hpTokWPanelLayout.createSequentialGroup()
+                        .addGap(160, 160, 160)
+                        .addComponent(hpTokWButton, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(87, Short.MAX_VALUE))
+        );
+        hpTokWPanelLayout.setVerticalGroup(
+            hpTokWPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(hpTokWPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(hpTokWCalculatorLabel)
+                .addGap(18, 18, 18)
+                .addGroup(hpTokWPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(dHorsepowerTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1))
+                .addGap(11, 11, 11)
+                .addComponent(hpTokWButton)
+                .addGap(18, 18, 18)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(98, Short.MAX_VALUE))
+        );
+
+        MainTabbedPane.addTab("hp to kW", hpTokWPanel);
+
+        BatteryChargingLabel.setText("Battery Charging Time (h, min)");
+
+        BatteryTipeButtonGroup.add(AGMBatteryButton2);
+        AGMBatteryButton2.setText("Batteria AGM");
+        AGMBatteryButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AGMBatteryButton2ActionPerformed(evt);
+            }
+        });
+
+        BatteryTipeButtonGroup.add(GelBatteryButton3);
+        GelBatteryButton3.setText("Batteria a Gel");
+        GelBatteryButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                GelBatteryButton3ActionPerformed(evt);
+            }
+        });
+
+        BatteryTipeButtonGroup.add(LiquidBatteryButton4);
+        LiquidBatteryButton4.setText("Batteria al liquido");
+        LiquidBatteryButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                LiquidBatteryButton4ActionPerformed(evt);
+            }
+        });
+
+        BatteryCapacityLabel.setText("Battery Capacity");
+
+        BatteryCapacityTextField.setText("Inserisci Capacità Batteria");
+        BatteryCapacityTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BatteryCapacityTextFieldActionPerformed(evt);
+            }
+        });
+
+        ChargerInputLabel.setText("Charger Input");
+
+        ChargerInputTextField.setText("Inserisci Corrente");
+        ChargerInputTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChargerInputTextFieldActionPerformed(evt);
+            }
+        });
+
+        EquipmentConsumptionLabel.setText("Equipment consumption");
+
+        EquipmentConsumptionTextField.setText("Inserisci Consumo");
+        EquipmentConsumptionTextField.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EquipmentConsumptionTextFieldActionPerformed(evt);
+            }
+        });
+
+        BatteryChargingTextArea.setEditable(false);
+        BatteryChargingTextArea.setColumns(20);
+        BatteryChargingTextArea.setRows(5);
+        jScrollPane2.setViewportView(BatteryChargingTextArea);
+
+        jButton1.setText("Calcola");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(18, 18, 18)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 15, Short.MAX_VALUE)
-                        .addComponent(jLabel3)
+        javax.swing.GroupLayout BatteryChargingPanelLayout = new javax.swing.GroupLayout(BatteryChargingPanel);
+        BatteryChargingPanel.setLayout(BatteryChargingPanelLayout);
+        BatteryChargingPanelLayout.setHorizontalGroup(
+            BatteryChargingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BatteryChargingPanelLayout.createSequentialGroup()
+                .addGroup(BatteryChargingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BatteryChargingPanelLayout.createSequentialGroup()
+                        .addGap(125, 125, 125)
+                        .addComponent(BatteryChargingLabel))
+                    .addGroup(BatteryChargingPanelLayout.createSequentialGroup()
+                        .addGap(99, 99, 99)
+                        .addComponent(GelBatteryButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
-                        .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(26, 26, 26))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jScrollPane1))
+                        .addComponent(AGMBatteryButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(BatteryChargingPanelLayout.createSequentialGroup()
+                        .addGap(60, 60, 60)
+                        .addGroup(BatteryChargingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BatteryChargingPanelLayout.createSequentialGroup()
+                                .addComponent(EquipmentConsumptionLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(EquipmentConsumptionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BatteryChargingPanelLayout.createSequentialGroup()
+                                .addComponent(ChargerInputLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(ChargerInputTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BatteryChargingPanelLayout.createSequentialGroup()
+                                .addComponent(BatteryCapacityLabel)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(BatteryCapacityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(BatteryChargingPanelLayout.createSequentialGroup()
+                        .addGap(168, 168, 168)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(92, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BatteryChargingPanelLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(LiquidBatteryButton4)
+                .addGap(145, 145, 145))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(17, 17, 17)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel1)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel3))
-                    .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        BatteryChargingPanelLayout.setVerticalGroup(
+            BatteryChargingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BatteryChargingPanelLayout.createSequentialGroup()
+                .addComponent(BatteryChargingLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(BatteryChargingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(AGMBatteryButton2)
+                    .addComponent(GelBatteryButton3))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(LiquidBatteryButton4)
+                .addGap(4, 4, 4)
+                .addGroup(BatteryChargingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BatteryCapacityLabel)
+                    .addComponent(BatteryCapacityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(BatteryChargingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(ChargerInputLabel)
+                    .addComponent(ChargerInputTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(BatteryChargingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(EquipmentConsumptionLabel)
+                    .addComponent(EquipmentConsumptionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addGap(30, 30, 30)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 256, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
-        jTabbedPane1.addTab("Energia Solare", jPanel1);
+        MainTabbedPane.addTab("Battery Charging Time", BatteryChargingPanel);
 
-        jLabel4.setText("Battery Volt");
+        BatteryUnChargingLabel1.setText("Battery UnCharging Time (h, min)");
 
-        jLabel5.setText("Battery Ampere");
+        BatteryCapacityLabel1.setText("Battery Capacity");
 
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
+        BatteryCapacityTextField1.setText("Inserisci Capacità Batteria");
+        BatteryCapacityTextField1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
+                BatteryCapacityTextField1ActionPerformed(evt);
             }
         });
 
-        jLabel6.setText("Battery number");
+        EquipmentConsumptionLabel1.setText("Equipment consumption");
 
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
+        EquipmentConsumptionTextField1.setText("Inserisci Consumo");
+        EquipmentConsumptionTextField1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                EquipmentConsumptionTextField1ActionPerformed(evt);
+            }
+        });
 
-        jButton2.setText("Watt calculation");
+        jButton2.setText("Calcola");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Serie", "Parallelo" }));
+        BatteryChargingTextArea.setEditable(false);
+        BatteryUnChargingTextArea1.setColumns(20);
+        BatteryUnChargingTextArea1.setRows(5);
+        jScrollPane4.setViewportView(BatteryUnChargingTextArea1);
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addGap(12, 12, 12)
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel2Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 94, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(12, 12, 12)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 5, Short.MAX_VALUE)
-                        .addComponent(jLabel6)
-                        .addGap(18, 18, 18)
-                        .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, 247, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(26, 26, 26))
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 232, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.Alignment.TRAILING)))
+        javax.swing.GroupLayout BatteryUnchargingPanelLayout = new javax.swing.GroupLayout(BatteryUnchargingPanel);
+        BatteryUnchargingPanel.setLayout(BatteryUnchargingPanelLayout);
+        BatteryUnchargingPanelLayout.setHorizontalGroup(
+            BatteryUnchargingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BatteryUnchargingPanelLayout.createSequentialGroup()
+                .addGap(65, 65, 65)
+                .addGroup(BatteryUnchargingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BatteryUnchargingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BatteryUnchargingPanelLayout.createSequentialGroup()
+                            .addComponent(EquipmentConsumptionLabel1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(EquipmentConsumptionTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BatteryUnchargingPanelLayout.createSequentialGroup()
+                            .addComponent(BatteryCapacityLabel1)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                            .addComponent(BatteryCapacityTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(BatteryUnchargingPanelLayout.createSequentialGroup()
+                        .addGap(108, 108, 108)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(87, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BatteryUnchargingPanelLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(BatteryUnChargingLabel1)
+                .addGap(108, 108, 108))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
+        BatteryUnchargingPanelLayout.setVerticalGroup(
+            BatteryUnchargingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BatteryUnchargingPanelLayout.createSequentialGroup()
                 .addGap(17, 17, 17)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel6)
-                        .addComponent(jLabel4))
-                    .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(BatteryUnChargingLabel1)
+                .addGap(18, 18, 18)
+                .addGroup(BatteryUnchargingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(BatteryCapacityLabel1)
+                    .addComponent(BatteryCapacityTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addGroup(BatteryUnchargingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(EquipmentConsumptionLabel1)
+                    .addComponent(EquipmentConsumptionTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(25, 25, 25)
                 .addComponent(jButton2)
-                .addGap(18, 18, 18)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(47, 47, 47))
         );
 
-        jTabbedPane1.addTab("Accumulo Energia", jPanel2);
+        MainTabbedPane.addTab("Battery Uncharging Time", BatteryUnchargingPanel);
 
-        jLabel7.setText("Battery Ampere Input");
+        WtoWhCalculatorLabel.setText("Watts to WattsHour Calculator (Wh)");
 
-        jLabel9.setText("TCarica=(Co*Eff./I_Input-I_Consumo)");
+        WattsLabel1.setText("Inserire Watts");
 
-        jLabel10.setText("Battery Ampere Consumo");
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Lito", "Gel", "Piombo" }));
-
-        jLabel11.setText("Capacita Pelevata");
-
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane3.setViewportView(jTextArea3);
-
-        jButton3.setText("Tempo di scarica");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        dWattsTextField.setText("Numero di Watts");
+        dWattsTextField.setToolTipText("");
+        dWattsTextField.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                dWattsTextFieldMouseClicked(evt);
+            }
+        });
+        dWattsTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                dWattsTextFieldActionPerformed(evt);
             }
         });
 
-        jButton4.setText("Tempo di carica");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        kWhCalcButton1.setText("Calcola");
+        kWhCalcButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                kWhCalcButton1ActionPerformed(evt);
             }
         });
 
-        jTextField5.setText("Amp");
+        kWhCalculatorTextArea.setEditable(false);
+        WhCalculatorTextArea.setColumns(20);
+        WhCalculatorTextArea.setRows(5);
+        kWhCalculatorScrollPanel1.setViewportView(WhCalculatorTextArea);
 
-        jTextField6.setText("Amp");
+        HoursLabel1.setText("Inserire numero di ore");
 
-        jTextField7.setText("AH");
+        iHoursSpinner1.setModel(new javax.swing.SpinnerNumberModel(0, 0, null, 1));
+        iHoursSpinner1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane3)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                        .addComponent(jLabel9)
-                        .addGap(29, 29, 29))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+        javax.swing.GroupLayout WtoWhCalculatorPanelLayout = new javax.swing.GroupLayout(WtoWhCalculatorPanel);
+        WtoWhCalculatorPanel.setLayout(WtoWhCalculatorPanelLayout);
+        WtoWhCalculatorPanelLayout.setHorizontalGroup(
+            WtoWhCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(WtoWhCalculatorPanelLayout.createSequentialGroup()
+                .addGroup(WtoWhCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(WtoWhCalculatorPanelLayout.createSequentialGroup()
+                        .addGap(154, 154, 154)
+                        .addComponent(kWhCalcButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(WtoWhCalculatorPanelLayout.createSequentialGroup()
+                        .addGap(103, 103, 103)
+                        .addGroup(WtoWhCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(kWhCalculatorScrollPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(WtoWhCalculatorLabel)
+                            .addGroup(WtoWhCalculatorPanelLayout.createSequentialGroup()
+                                .addComponent(WattsLabel1)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel11))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 226, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton4)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton3)
-                        .addGap(38, 38, 38))))
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(jLabel9)
-                    .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel10)
-                            .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(9, 9, 9)
-                        .addComponent(jLabel8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanel4Layout.createSequentialGroup()
-                                .addGap(71, 71, 71)
-                                .addComponent(jLabel11))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jButton3)
-                                    .addComponent(jButton4))))
+                                .addComponent(dWattsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 122, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, WtoWhCalculatorPanelLayout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(HoursLabel1)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 209, Short.MAX_VALUE)
-                        .addContainerGap())))
+                        .addComponent(iHoursSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)))
+                .addGap(103, 103, 103))
+        );
+        WtoWhCalculatorPanelLayout.setVerticalGroup(
+            WtoWhCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(WtoWhCalculatorPanelLayout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addComponent(WtoWhCalculatorLabel)
+                .addGap(18, 18, 18)
+                .addGroup(WtoWhCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(WattsLabel1)
+                    .addComponent(dWattsTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(WtoWhCalculatorPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(HoursLabel1)
+                    .addComponent(iHoursSpinner1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(24, 24, 24)
+                .addComponent(kWhCalcButton1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(kWhCalculatorScrollPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(45, Short.MAX_VALUE))
         );
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
-        );
+        MainTabbedPane.addTab("W to Wh", WtoWhCalculatorPanel);
 
-        jTabbedPane1.addTab("Carica Scarica", jPanel3);
+        FileMenuItem.setText("File");
+
+        NewWindowSubMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        NewWindowSubMenuItem.setText("New Window");
+        NewWindowSubMenuItem.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                NewWindowSubMenuItemMouseClicked(evt);
+            }
+        });
+        NewWindowSubMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                NewWindowSubMenuItemActionPerformed(evt);
+            }
+        });
+        FileMenuItem.add(NewWindowSubMenuItem);
+
+        CloseSubMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F4, java.awt.event.InputEvent.ALT_DOWN_MASK));
+        CloseSubMenuItem.setText("Close");
+        CloseSubMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CloseSubMenuItemActionPerformed(evt);
+            }
+        });
+        FileMenuItem.add(CloseSubMenuItem);
+
+        HelpSubMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_H, java.awt.event.InputEvent.CTRL_DOWN_MASK));
+        HelpSubMenuItem.setText("Help");
+        HelpSubMenuItem.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HelpSubMenuItemActionPerformed(evt);
+            }
+        });
+        FileMenuItem.add(HelpSubMenuItem);
+
+        MainMenuBar.add(FileMenuItem);
+
+        setJMenuBar(MainMenuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -347,52 +796,206 @@ public class MainForm extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1)
-                .addContainerGap())
+                .addComponent(MainTabbedPane, javax.swing.GroupLayout.PREFERRED_SIZE, 414, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jTabbedPane1)
-                .addContainerGap())
+            .addComponent(MainTabbedPane)
         );
+
+        MainTabbedPane.getAccessibleContext().setAccessibleName("tab2");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+    private void kWtoAButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kWtoAButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField2ActionPerformed
+        double dPower, dAmpere, dVolt;
+        FormuleMetodi nuovoclassemetodo = new FormuleMetodi();
+        dPower = Double.parseDouble(dPowerTextField.getText());
+        dVolt = Double.parseDouble(dVoltTextField2.getText());
+        dAmpere = FormuleMetodi.KilowattsToAmpsCalculation(dPower, dVolt);
+        String stmpConsole = PowerCalculatorTextArea.getText();
 
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
+        kWtoATextArea.setText(stmpConsole + "\n" + "Ampere totali: " + dAmpere + " A" + "\n");
+    }//GEN-LAST:event_kWtoAButtonActionPerformed
+
+    private void dVoltTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dVoltTextField2ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField4ActionPerformed
+    }//GEN-LAST:event_dVoltTextField2ActionPerformed
+
+    private void dPowerTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dPowerTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dPowerTextFieldActionPerformed
+
+    private void PowerCalcButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_PowerCalcButtonActionPerformed
+        // TODO add your handling code here:
+        double dVolt, dAmpere, dKilowatts;
+        FormuleMetodi nuovoclassemetodo = new FormuleMetodi();
+        dVolt = Double.parseDouble(dVoltTextField1.getText());
+        dAmpere = Double.parseDouble(dAmpereTextField1.getText());
+        dKilowatts = FormuleMetodi.PowerCalculation(dAmpere, dVolt);
+        String stmpConsole = PowerCalculatorTextArea.getText();
+
+        PowerCalculatorTextArea.setText(stmpConsole + "\n" + "La potenza e' " + dKilowatts + " kW" + "\n");
+    }//GEN-LAST:event_PowerCalcButtonActionPerformed
+
+    private void dAmpereTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dAmpereTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dAmpereTextField1ActionPerformed
+
+    private void dVoltTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dVoltTextField1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dVoltTextField1ActionPerformed
+
+    private void kWhCalcButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kWhCalcButtonActionPerformed
+        // TODO add your handling code here:
+
+        double dKilowatts, dKilowattsHour;
+        int iHours;
+
+        dKilowatts = Double.parseDouble(dKilowattsTextField.getText());
+        iHours = (Integer) iHoursSpinner.getValue();
+        dKilowattsHour = FormuleMetodi.KilowattsHourCalculation(dKilowatts, iHours);
+        String stmpConsole = kWhCalculatorTextArea.getText();
+
+        kWhCalculatorTextArea.setText(stmpConsole + "\n" + "L'energia e': " + dKilowattsHour + " kWh" + "\n");
+    }//GEN-LAST:event_kWhCalcButtonActionPerformed
+
+    private void dKilowattsTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dKilowattsTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dKilowattsTextFieldActionPerformed
+
+    private void dKilowattsTextFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dKilowattsTextFieldMouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_dKilowattsTextFieldMouseClicked
+
+    private void dHorsepowerTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dHorsepowerTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dHorsepowerTextFieldActionPerformed
+
+    private void hpTokWButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_hpTokWButtonActionPerformed
+        // TODO add your handling code here:
+        double dKilowatts;
+        double dHorsepower = Double.parseDouble(dHorsepowerTextField.getText());
+        dKilowatts = FormuleMetodi.HorsepowerToKiloWattCalculation(dHorsepower);
+        String stmpConsole = hpTokWTextArea.getText();
+
+        hpTokWTextArea.setText(stmpConsole + "\n" + "I kilowatts sono: " + dKilowatts + " kWh" + "\n" + "I watts sono: " + (dKilowatts * 1000) + " W");
+    }//GEN-LAST:event_hpTokWButtonActionPerformed
+
+    private void NewWindowSubMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_NewWindowSubMenuItemActionPerformed
+        // TODO add your handling code here:
+        FormuleMetodi.NewWindow();
+    }//GEN-LAST:event_NewWindowSubMenuItemActionPerformed
+
+    private void NewWindowSubMenuItemMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_NewWindowSubMenuItemMouseClicked
+        // TODO add your handling code here:
+
+    }//GEN-LAST:event_NewWindowSubMenuItemMouseClicked
+
+    private void CloseSubMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CloseSubMenuItemActionPerformed
+        // TODO add your handling code here:
+        FormuleMetodi.DisposeJFrame(this);
+    }//GEN-LAST:event_CloseSubMenuItemActionPerformed
+
+    private void HelpSubMenuItemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HelpSubMenuItemActionPerformed
+        // TODO add your handling code here:
+        FormuleMetodi.HelpDialogPage(jDialog1);
+    }//GEN-LAST:event_HelpSubMenuItemActionPerformed
+
+    private void LiquidBatteryButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LiquidBatteryButton4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_LiquidBatteryButton4ActionPerformed
+
+    private void GelBatteryButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_GelBatteryButton3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_GelBatteryButton3ActionPerformed
+
+    private void AGMBatteryButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AGMBatteryButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AGMBatteryButton2ActionPerformed
+
+    private void BatteryCapacityTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatteryCapacityTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BatteryCapacityTextFieldActionPerformed
+
+    private void ChargerInputTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChargerInputTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ChargerInputTextFieldActionPerformed
+
+    private void EquipmentConsumptionTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EquipmentConsumptionTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_EquipmentConsumptionTextFieldActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-                 //
-    FormuleMetodi_3C formule= new FormuleMetodi_3C();
-    double volt,ampere;
-    int npannelli;
-    
-    String tmp=jTextField1.getText();
-    volt=Double.parseDouble(tmp);
-    tmp=jTextField2.getText();
-    ampere=Double.parseDouble(tmp);
-    
-    npannelli=jSlider1.getValue();
-    double watt=formule.WattPanelCalculation(ampere, volt, npannelli);
-
-
+        // TODO add your handling code here:
+        final double dGelEff = 1.1, dAGMEff = 1.15, dLiquidEff = 1.2;
+        double dCapacity = Double.parseDouble(BatteryCapacityTextField.getText());
+        double dChargerInput = Double.parseDouble(ChargerInputTextField.getText());
+        double dConsumption = Double.parseDouble(EquipmentConsumptionTextField.getText());
+        double dTime = 0;
+if ((dCapacity/dChargerInput)>0.25){
+ 
+JOptionPane.showConfirmDialog(rootPane, "Attenzione: se la corrente del caricatore e maggiore del 25% della capacita della batteria, si rischia di danneggiare la stessa.", "Attenzione!", 2, 2);
+}
+        if (AGMBatteryButton2.isSelected()) {
+            dTime = FormuleMetodi.ChargingTimeCalculation(dCapacity, dAGMEff, dChargerInput, dConsumption);
+        } else if (GelBatteryButton3.isSelected()) {
+            dTime = FormuleMetodi.ChargingTimeCalculation(dCapacity, dGelEff, dChargerInput, dConsumption);
+        } else if (LiquidBatteryButton4.isSelected()) {
+            dTime = FormuleMetodi.ChargingTimeCalculation(dCapacity, dLiquidEff, dChargerInput, dConsumption);
+        }
+      double  dMinutes=FormuleMetodi.MinuteConverter(dTime);
+        String stmpConsole = BatteryChargingTextArea.getText();
+        BatteryChargingTextArea.setText(stmpConsole + "\n" + "Il tempo e': " + ((int)(dTime)) + "ore e " + ((int) (dMinutes)) + "min" + "\n");
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void BatteryCapacityTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BatteryCapacityTextField1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_BatteryCapacityTextField1ActionPerformed
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
+    private void EquipmentConsumptionTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_EquipmentConsumptionTextField1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    }//GEN-LAST:event_EquipmentConsumptionTextField1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        double dCapacity = Double.parseDouble(BatteryCapacityTextField1.getText());
+        double dConsumption = Double.parseDouble(EquipmentConsumptionTextField1.getText());
+        double dTime = FormuleMetodi.UnChargingTimeCalculation(dCapacity, dConsumption);
+        String stmpConsole = BatteryChargingTextArea.getText();
+        double dMinutes = FormuleMetodi.MinuteConverter(dTime);
+        double dHalfTime = FormuleMetodi.UnChargingTimeCalculation((dCapacity/2), dConsumption);
+        double dHalfMinutes = FormuleMetodi.MinuteConverter(dHalfTime);
+        String stmpstring = "Attenzione: il punto ottimale di scaricamento (50%) e' "+((int)(dHalfTime))+"ore e "+dHalfMinutes+" minuti.";
+       
+        BatteryUnChargingTextArea1.setText(stmpConsole + "\n" + "Il tempo e': " + ((int)(dTime)) + "ore e " + ((int) (dMinutes)) + "min" + "\n");
+         JOptionPane.showConfirmDialog(rootPane, stmpstring , "Attenzione!", 2, 2);
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void dWattsTextFieldMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_dWattsTextFieldMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dWattsTextFieldMouseClicked
+
+    private void dWattsTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dWattsTextFieldActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dWattsTextFieldActionPerformed
+
+    private void kWhCalcButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_kWhCalcButton1ActionPerformed
+        // TODO add your handling code here:
+         double dWatts, dWattsHour;
+        int iHours;
+
+        dWatts = Double.parseDouble(dWattsTextField.getText());
+        iHours = (Integer) iHoursSpinner1.getValue();
+        dWattsHour = FormuleMetodi.WattsHourCalculation(dWatts, iHours);
+        String stmpConsole = kWhCalculatorTextArea.getText();
+
+        WhCalculatorTextArea.setText(stmpConsole + "\n" + "L'energia e': " + dWattsHour + " Wh" + "\n");
+    }//GEN-LAST:event_kWhCalcButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -420,7 +1023,7 @@ public class MainForm extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MainForm.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+        FormuleMetodi nuovoclassemetodo = new FormuleMetodi();
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
@@ -430,42 +1033,83 @@ public class MainForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JRadioButton AGMBatteryButton2;
+    private javax.swing.JLabel AmpereLabel1;
+    private javax.swing.JLabel BatteryCapacityLabel;
+    private javax.swing.JLabel BatteryCapacityLabel1;
+    private javax.swing.JTextField BatteryCapacityTextField;
+    private javax.swing.JTextField BatteryCapacityTextField1;
+    private javax.swing.JLabel BatteryChargingLabel;
+    private javax.swing.JPanel BatteryChargingPanel;
+    private javax.swing.JTextArea BatteryChargingTextArea;
+    private javax.swing.ButtonGroup BatteryTipeButtonGroup;
+    private javax.swing.JLabel BatteryUnChargingLabel1;
+    private javax.swing.JTextArea BatteryUnChargingTextArea1;
+    private javax.swing.JPanel BatteryUnchargingPanel;
+    private javax.swing.JLabel ChargerInputLabel;
+    private javax.swing.JTextField ChargerInputTextField;
+    private javax.swing.JMenuItem CloseSubMenuItem;
+    private javax.swing.JLabel EquipmentConsumptionLabel;
+    private javax.swing.JLabel EquipmentConsumptionLabel1;
+    private javax.swing.JTextField EquipmentConsumptionTextField;
+    private javax.swing.JTextField EquipmentConsumptionTextField1;
+    private javax.swing.JMenu FileMenuItem;
+    private javax.swing.JRadioButton GelBatteryButton3;
+    private javax.swing.JMenuItem HelpSubMenuItem;
+    private javax.swing.JLabel HoursLabel;
+    private javax.swing.JLabel HoursLabel1;
+    private javax.swing.JLabel KilowattsLabel;
+    private javax.swing.JRadioButton LiquidBatteryButton4;
+    private javax.swing.JMenuBar MainMenuBar;
+    private javax.swing.JTabbedPane MainTabbedPane;
+    private javax.swing.JMenuItem NewWindowSubMenuItem;
+    private javax.swing.JButton PowerCalcButton;
+    private javax.swing.JLabel PowerCalcolatorLabel;
+    private javax.swing.JPanel PowerCalculatorPanel;
+    private javax.swing.JScrollPane PowerCalculatorScrollPanel;
+    private javax.swing.JTextArea PowerCalculatorTextArea;
+    private javax.swing.JLabel PowerLabel1;
+    private javax.swing.JLabel VoltLabel1;
+    private javax.swing.JLabel VoltLabel2;
+    private javax.swing.JLabel WattsLabel1;
+    private javax.swing.JTextArea WhCalculatorTextArea;
+    private javax.swing.JLabel WtoWhCalculatorLabel;
+    private javax.swing.JPanel WtoWhCalculatorPanel;
+    private javax.swing.JTextField dAmpereTextField1;
+    private javax.swing.JTextField dHorsepowerTextField;
+    private javax.swing.JTextField dKilowattsTextField;
+    private javax.swing.JTextField dPowerTextField;
+    private javax.swing.JTextField dVoltTextField1;
+    private javax.swing.JTextField dVoltTextField2;
+    private javax.swing.JTextField dWattsTextField;
+    private javax.swing.JButton hpTokWButton;
+    private javax.swing.JLabel hpTokWCalculatorLabel;
+    private javax.swing.JPanel hpTokWPanel;
+    private javax.swing.JTextArea hpTokWTextArea;
+    private javax.swing.JSpinner iHoursSpinner;
+    private javax.swing.JSpinner iHoursSpinner1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
+    public javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JSlider jSlider1;
-    private javax.swing.JSlider jSlider2;
-    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
+    private javax.swing.JButton kWhCalcButton;
+    private javax.swing.JButton kWhCalcButton1;
+    private javax.swing.JScrollPane kWhCalculatorScrollPanel;
+    private javax.swing.JScrollPane kWhCalculatorScrollPanel1;
+    private javax.swing.JTextArea kWhCalculatorTextArea;
+    private javax.swing.JButton kWtoAButton;
+    private javax.swing.JLabel kWtoALabel;
+    private javax.swing.JPanel kWtoAPanel;
+    private javax.swing.JScrollPane kWtoAScrollPanel;
+    private javax.swing.JTextArea kWtoATextArea;
+    private javax.swing.JLabel kWtokWhCalculatorLabel;
+    private javax.swing.JPanel kWtokWhCalculatorPanel;
     // End of variables declaration//GEN-END:variables
 }
